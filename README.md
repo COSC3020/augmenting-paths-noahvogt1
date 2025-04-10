@@ -39,8 +39,8 @@ accordingly.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-I believe the $\Theta$ complexity of this algorithm is $\Theta(v * e)$. This is because
+I believe the $\Theta$ complexity of this algorithm is $\Theta(v + e)$. This is because
 we search through all nodes in the worst case via the recursive call. Then in each call,
 we have a for loop that goes through each adjacent node but only if there is an edge because
-we used an adjacency list. This means we would itterate through all of the edges which gives us
-a final complexity of $\Theta(v * e)$.
+we used an adjacency list. But since we don't revisit nodes, this means we will only check each
+edge once. Giving us a final complexity of $\Theta(v + e)$.
